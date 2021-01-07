@@ -831,7 +831,7 @@ function hbase_javac_logfilter
   declare input=$1
   declare output=$2
 
-  ${GREP} -E '\[(ERROR|WARNING)\] /.*\.java:' "${input}" | sort > "${output}"
+  ${GREP} -E '\[ERROR\] /.*\.java:' "${input}" | sort > "${output}"
 }
 
 ## This is named so that yetus will check us right after running tests.
